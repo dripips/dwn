@@ -40,7 +40,7 @@ Rails.application.configure do
   # Don't log any deprecations.
   config.active_support.report_deprecations = false
 
-  config.cache_store = :memory_store, { size: 64.megabytes }
+  config.cache_store = :memory_store, { size: 64 * 1024 * 1024 }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
