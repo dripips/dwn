@@ -8,10 +8,10 @@ class DownloaderController < ApplicationController
   def show
     url = params.require(:url)
 
-    cached = Rails.cache.fetch(["yt-dlp", url], expires_in: 30.minutes) do
+    cached = Rails.cache.fetch([ "yt-dlp", url ], expires_in: 30.minutes) do
       args = "--no-warnings --no-playlist --no-download --dump-single-json"
       args += " --cookies /etc/yt-dlp/cookies.txt" if File.exist?("/etc/yt-dlp/cookies.txt")
-      cmd = Terrapin::CommandLine.new("yt-dlp", "#{args} :url", expected_outcodes: [0])
+      cmd = Terrapin::CommandLine.new("yt-dlp", "#{args} :url", expected_outcodes: [ 0 ])
       JSON.parse(cmd.run(url: url))
     end
 

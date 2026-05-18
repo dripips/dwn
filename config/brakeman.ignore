@@ -1,0 +1,10 @@
+{
+  "ignored_warnings": [
+    {
+      "fingerprint": "edf687f759ec9765bd5db185dbc615c80af77d6e7e19386fc42934e7a80307af",
+      "note": "Server runs Ruby 3.2.3 (system package on Ubuntu 24.04)"
+    }
+  ],
+  "updated": "2026-05-18",
+  "brakeman_version": "8.0.4"
+}
